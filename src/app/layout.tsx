@@ -13,45 +13,39 @@ export default function RootLayout({}: Readonly<{}>) {
     <html lang="pt">
       <body className="">
         <Button
-          onClick={(event) => alert('Oi')}
           type={TypeButton.button}
           disabled={false}
-          className="fixed bottom-0 right-0 px-4 py-2 text-sm bg-blue-500 hover:bg-blue-700 text-white rounded-lg shadow-md"
+          className=""
         > Sou Desenvolvedora Fullstack
         </Button>
         <Button
-          onClick={(event) => alert('Oi')}
           type={TypeButton.button}
           disabled={false}
-          className="fixed bottom-0 right-0 px-4 py-2 text-sm bg-blue-500 hover:bg-blue-700 text-white rounded-lg shadow-md"
+          className=""
         > Sou Desenvolvedora Fullstack
         </Button>
         <Button
-          onClick={(event) => alert('Oi')}
           type={TypeButton.button}
           disabled={false}
-          className="fixed bottom-0 right-0 px-4 py-2 text-sm bg-blue-500 hover:bg-blue-700 text-white rounded-lg shadow-md"
+          className=""
         > Projetos
         </Button>
         <Button
-          onClick={(event) => alert('Oi')}
           type={TypeButton.button}
           disabled={false}
-          className="fixed bottom-0 right-0 px-4 py-2 text-sm bg-blue-500 hover:bg-blue-700 text-white rounded-lg shadow-md"
+          className=""
         > Experiência
         </Button>
         <Button
-          onClick={(event) => alert('Oi')}
           type={TypeButton.button}
           disabled={false}
-          className="fixed bottom-0 right-0 px-4 py-2 text-sm bg-blue-500 hover:bg-blue-700 text-white rounded-lg shadow-md"
+          className=""
         > soft skills
         </Button>
         <Button
-          onClick={(event) => alert('Oi')}
           type={TypeButton.button}
           disabled={false}
-          className="fixed bottom-0 right-0 px-4 py-2 text-sm bg-blue-500 hover:bg-blue-700 text-white rounded-lg shadow-md"
+          className=""
         > Contato
         </Button>
       </body>

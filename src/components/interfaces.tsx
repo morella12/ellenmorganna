@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, MouseEventHandler } from 'react';
 
 export enum TypeButton {
   button = 'button',
@@ -7,7 +7,7 @@ export enum TypeButton {
 }
 
 export interface ButtonProps {
-  onClick:  (event: MouseEvent<HTMLButtonElement>) => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
   type: TypeButton;
   disabled?: boolean;
