@@ -5,4 +5,5 @@ export interface NavbarPros {
   children?: React.ReactNode;
   disabled?: boolean;
   className?: string;
+  typeNavbar?: string;
 };

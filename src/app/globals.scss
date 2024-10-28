@@ -6,3 +6,24 @@
 * {
   font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+header {
+  height: calc(100vh - 40px);
+}
+
+.name-logo {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  padding-left: 10%;
+}
+
+.icons {
+  // margin-top: 63vh;
+}
+
+
+.menu-first-page {
+  width: 100vw;
+  height: 30vh;
+  top: 50%;
+}

@@ -1,53 +1,48 @@
+'use client'
+
 import "./style.scss";
 import { Button } from "@/components/Button/button.component";
 import { TypeButton } from "@/components/Button/interfaces";
 import { NavbarPros } from "./interface";
 
 export const Navbar: React.FC<NavbarPros> = ({
-  onClick,
-  children,
-  disabled = false,
   className = ''
 }) => {
+  const classButton = 'uppercase border-r-2 border-white text-lg hover:text-light-gray';
+
   return (
     <nav
       id="nav-fullscreen"
-      className="bg-dark-gray size-full flex flex-auto py-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"
+      className={className}
     >
       <Button
         type={TypeButton.button}
         disabled={false}
-        className="uppercase"
+        className={classButton}
       > Sou Desenvolvedora Fullstack
       </Button>
       <Button
         type={TypeButton.button}
         disabled={false}
-        className="uppercase"
-      > Sou Desenvolvedora Fullstack
-      </Button>
-      <Button
-        type={TypeButton.button}
-        disabled={false}
-        className="uppercase"
+        className={classButton}
       > Projetos
       </Button>
       <Button
         type={TypeButton.button}
         disabled={false}
-        className="uppercase"
+        className={classButton}
       > Experiência
       </Button>
       <Button
         type={TypeButton.button}
         disabled={false}
-        className="uppercase"
+        className={classButton}
       > soft skills
       </Button>
       <Button
         type={TypeButton.button}
         disabled={false}
-        className="uppercase"
+        className="uppercase text-lg hover:text-light-gray"
       > Contato
       </Button>
     </nav>
