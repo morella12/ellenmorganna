@@ -18,7 +18,9 @@ export default function RootLayout({ children, params }: Readonly<{ children: Re
   return (
     <html lang={params.lang}>
       <Head>
-        <link rel="icon" href="../../public/images/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
+        <title>Ellen Morganna Fullstack Developer</title>
+        <meta name="description" content="Web Development Profissinal" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Ellen Morganna, Web Developer, Freelance Web Developer, Remote Fullstack Developer, Fullstack Developer for Hire, Web Application Development, SaaS Development, E-commerce Development, Scalable Web Applications, Cloud (AWS, Azure), API Development, Open Source Contributor, Agile, DevOps, App Developer, Frontend, Backend, Fullstack, React.js, React Native, Next.js, Node.js, Vue.js, JavaScript, TypeScript, HTML5, CSS3, Sass, TailwindCSS, RESTful API, SQL, NoSQL" />
         <meta name="author" content="Ellen Morganna" />
