@@ -6,24 +6,23 @@ import folhasVerdes from "../../public/images/folhasVerdes.png";
 import ellenMorganna from "../../public/images/ellenMorganna.png";
 import asteristicoGreen from "../../public/images/asteristicoGreen.png";
 import asteristicoPink from "../../public/images/asteristicoPink.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { Navbar } from "@/components/Navbar/navbar.component";
 import Image from "next/image";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Ellen Morganna",
   description: "Web Development Profissinal",
 };
 
-export default function RootLayout({}: Readonly<{}>) {
+export default function RootLayout({ children, params }: Readonly<{ children: React.ReactNode; params: { lang: string } }>) {
   return (
-    <html lang="pt">
+    <html lang={params.lang}>
+      <Head>
+        <link rel="icon" href="../../public/images/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="Ellen Morganna, Web Developer, Freelance Web Developer, Remote Fullstack Developer, Fullstack Developer for Hire, Web Application Development, SaaS Development, E-commerce Development, Scalable Web Applications, Cloud (AWS, Azure), API Development, Open Source Contributor, Agile, DevOps, App Developer, Frontend, Backend, Fullstack, React.js, React Native, Next.js, Node.js, Vue.js, JavaScript, TypeScript, HTML5, CSS3, Sass, TailwindCSS, RESTful API, SQL, NoSQL" />
+        <meta name="author" content="Ellen Morganna" />
+      </Head>
       <body className="mx-auto mt-10">
         <div className="relative text-center">
           <Image className="folhas-rosas" src={folhasVerdes} alt="Folhas Rosas" width={150} height={150} />
@@ -52,34 +51,9 @@ export default function RootLayout({}: Readonly<{}>) {
               </div>
               <div className="intro-bar ">
                 <Image className="asteristico-green" src={asteristicoGreen} alt="Asterístico Green" width={20} height={20} />
-                <Navbar className="content-center text-white grid grid-cols-3 gap-3" />
                 <Image className="asteristico-pink" src={asteristicoPink} alt="Asterístico Pink" width={20} height={20} />
               </div>
             </div>
-            {/* <Navbar className="content-center text-white grid grid-cols-5 gap-5" />
-            <div className="icons flex flex-row-reverse">
-              <a className="mx-1">
-                <FontAwesomeIcon className="size-9" icon={faEnvelope} />
-              </a>
-              <a className="mx-1">
-                <FontAwesomeIcon className="size-9" icon={faGithub} />
-              </a>
-              <a className="mx-1">
-                <FontAwesomeIcon
-                  className="size-9"
-                  color="#25d366"
-                  icon={faWhatsapp}
-                />
-              </a>
-              <a className="mx-1">
-                <FontAwesomeIcon
-                  className="size-9"
-                  color="#0274b3"
-                  icon={faLinkedin}
-                />
-              </a>
-            </div>
-            <Navbar className="hamburger-menu sm:px-6 md:hidden lg:hidden xl:hidden 2xl:hidden" /> */}
           </div>
         </div>
       </body>
