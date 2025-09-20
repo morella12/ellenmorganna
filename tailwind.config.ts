@@ -8,10 +8,12 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      'medium-gray': '#d9d9d9',
-      'light-gray': '#d9d9d9',
-      'dark-gray': '#9f9f9f',
-      'white': '#f8f6f6',
+      'pink': '#fabcf0',
+      'pinkLight': '#fef8fd',
+      'green': '#628850',
+      'greenDark': '#384233',
+      'orange': '#ffa649',
+      'yellow': '#f8e10e'
     },
     extend: {
       backgroundImage: {

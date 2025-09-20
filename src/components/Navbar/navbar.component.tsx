@@ -1,9 +1,9 @@
 'use client'
 
 import "./style.scss";
-import { Button } from "@/components/Button/button.component";
-import { TypeButton } from "@/components/Button/interfaces";
 import { NavbarPros } from "./interface";
+import Image from "next/image";
+import navBar from "../../../public/images/navbar.png";
 
 export const Navbar: React.FC<NavbarPros> = ({
   className = ''
@@ -13,38 +13,36 @@ export const Navbar: React.FC<NavbarPros> = ({
   return (
     <nav
       id="nav-fullscreen"
-      className={className}
+      className={className + " flex flex-col items-center justify-center w-full"}
     >
-      <Button
-        type={TypeButton.button}
-        disabled={false}
-        className={classButton}
-      > Sou Desenvolvedora Fullstack
-      </Button>
-      <Button
-        type={TypeButton.button}
-        disabled={false}
-        className={classButton}
-      > Projetos
-      </Button>
-      <Button
-        type={TypeButton.button}
-        disabled={false}
-        className={classButton}
-      > Experiência
-      </Button>
-      <Button
-        type={TypeButton.button}
-        disabled={false}
-        className={classButton}
-      > soft skills
-      </Button>
-      <Button
-        type={TypeButton.button}
-        disabled={false}
-        className="uppercase text-lg hover:text-light-gray"
-      > Contato
-      </Button>
+      <Image src={navBar} alt="Navbar" className="icon z-50 fixed right-4 top-9 transform -translate-y-1/2" width={50} height={50} />
+      <ul className="menu flex flex-row justify-center items-center gap-6">
+        <li>
+          <button className={classButton} type="button">
+            Home
+          </button>
+        </li>
+        <li>
+          <button className={classButton} type="button">
+            About
+          </button>
+        </li>
+        <li>
+          <button className={classButton} type="button">
+            Services
+          </button>
+        </li>
+        <li>
+          <button className={classButton} type="button">
+            Portfolio
+          </button>
+        </li>
+        <li>
+          <button className={classButton} type="button">
+            Contact
+          </button>
+        </li>
+      </ul>
     </nav>
   );
 };

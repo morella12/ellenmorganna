@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+// Importing fonts
 @font-face {
   font-family: "Archivo";
   src: url("../../public/fonts/static/Archivo-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo-Bold";
+  src: url("../../public/fonts/static/Archivo-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
   font-display: swap;
 }
 
@@ -26,36 +35,90 @@
   font-display: swap;
 }
 
+// Variables fonts
 $font-regular: "Archivo", sans-serif;
+$font-regular-bold: "Archivo-Bold", sans-serif;
 $font-decorative: "Corinthia", cursive;
 $font-decorative-bold: "Corinthia-Bold", cursive;
 
-@thema {
-  --font-sans: "Archivo";
-}
-
-
+// Colors
 $pink: #fabcf0;
-$pink-light: #fef8fd;
+$pinkLight: #fef8fd;
 $green: #628850;
-$green-dark: #384233;
+$greenDark: #384233;
 $orange: #ffa649;
 $yellow: #f8e10e;
 
+$borderPlates: $green 2px outset;
+
 body {
   font-family: $font-regular;
-}
-header {
-  height: calc(100vh - 40px);
+
+  .destaque {
+    color: $pink;
+    text-transform: uppercase;
+    font-family: $font-regular-bold;
+    font-size: 1.3rem;
+  }
+
+  .ellen-morganna {
+    background-color: $pink;
+    border-radius: 125px 125px 0 0;
+    height: 83vh;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  @media screen {
+    @media (max-width: 640px) {
+      .folhas-rosas {
+        display: none;
+      }
+
+      .name-logo {
+        font-size: 1.6rem;
+      }
+
+      .conchetes, .icon {
+        display: none;
+      }
+      
+    }
+  }
 }
 
-.name-logo {
-  font-size: 0.5rem;
-  letter-spacing: 0.2rem;
+header {
+  margin-left: 8.3333%;
+  font-family: $font-regular-bold;
 }
+
+// .name-logo {
+//   font-size: 0.5rem;
+//   letter-spacing: 0.2rem;
+// }
 
 .menu-first-page {
   width: 100vw;
   height: 30vh;
   top: 50%;
+}
+
+.profile-image {
+  span{
+    background-color: $pinkLight;
+    position: absolute;
+  } 
+  #web {
+    // aqui tenho uma placa com uma sombra
+    border: $borderPlates;
+    border-radius: 100px 100px 100px 0px;
+    top: 20%;
+    left: 68%;
+  }
+  #app {
+    border: $borderPlates;
+    border-radius: 100px 100px 0px 100px;
+    bottom: 30%;
+    right: 68%;
+  }
 }
