@@ -6,20 +6,28 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    colors: {
-      'pink': '#fabcf0',
-      'pinkLight': '#fef8fd',
-      'green': '#628850',
-      'greenDark': '#384233',
-      'orange': '#ffa649',
-      'yellow': '#f8e10e'
-    },
+   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        creme: {
+          50: "#fdfaf5",
+          100: "#f8f0e2",
+          200: "#f0e0c4",
+        },
+        rosebrand: {
+          500: "#f06292",
+          600: "#e24a7f",
+        },
+        militar: {
+          500: "#4b5a41",
+          600: "#3b4634",
+        },
+      },
+      boxShadow: {
+        soft: "0 18px 45px rgba(0,0,0,0.08)",
+      },
+      borderRadius: {
+        "3xl": "1.75rem",
       },
     },
   },
