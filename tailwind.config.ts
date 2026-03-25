@@ -1,36 +1,18 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [
-    "./src/page/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-   theme: {
+const config = {
+  theme: {
     extend: {
       colors: {
-        creme: {
-          50: "#fdfaf5",
-          100: "#f8f0e2",
-          200: "#f0e0c4",
-        },
-        rosebrand: {
-          500: "#f06292",
-          600: "#e24a7f",
-        },
-        militar: {
-          500: "#4b5a41",
-          600: "#3b4634",
+        brand: {
+          purple: "#7c3aed",
+          pink: "#db2777",
+          dark: "#0a0118",
+          card: "rgba(255, 255, 255, 0.05)",
         },
       },
-      boxShadow: {
-        soft: "0 18px 45px rgba(0,0,0,0.08)",
-      },
-      borderRadius: {
-        "3xl": "1.75rem",
-      },
+      backgroundImage: {
+        'grid-pattern': "linear-gradient(to right, #1e1b4b 1px, transparent 1px), linear-gradient(to bottom, #1e1b4b 1px, transparent 1px)",
+      }
     },
   },
-  plugins: [],
-};
+}
 export default config;
