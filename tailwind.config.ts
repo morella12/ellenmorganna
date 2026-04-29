@@ -2,8 +2,9 @@ const config = {
   theme: {
     extend: {
       colors: {
+        purpleDark: "#1e0e38",
+        purple: "#1e0d36",
         brand: {
-          purple: "#7c3aed",
           pink: "#db2777",
           dark: "#0a0118",
           card: "rgba(255, 255, 255, 0.05)",

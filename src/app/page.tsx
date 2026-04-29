@@ -1,4 +1,8 @@
+// import { Navbar } from "@/components/Navbar/navbar.component";
+import { Navbar } from "@/components/Navbar/navbar.component";
 import { ArrowRight, Gamepad2, Globe, Rocket, Megaphone } from "lucide-react";
+import Image from "next/image";
+// import AvatarEllenMorganna from "./../public/AvatarEllenMorganna";
 
 // --- Sub-componente de Card de Serviço ---
 const ServiceCard = ({ title, desc, icon: Icon }: any) => (
@@ -14,25 +18,22 @@ const ServiceCard = ({ title, desc, icon: Icon }: any) => (
   </div>
 );
 
+const classTeste = `
+  min-h-screen 
+  bg-brand-dark 
+  text-white 
+  font-sans 
+  selection:bg-brand-pink
+`;
+
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-brand-dark text-white font-sans selection:bg-brand-pink">
+    <main className={classTeste}>
       {/* BACKGROUND GRID EFFECT */}
       <div className="fixed inset-0 bg-grid-pattern bg-[size:50px_50px] opacity-20 pointer-events-none" />
 
       {/* NAVBAR */}
-      <nav className="flex justify-between items-center p-8 max-w-7xl mx-auto relative z-10">
-        <div className="font-black text-2xl tracking-tighter">CODEMIND</div>
-        <div className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-          <a href="#" className="hover:text-white">Sobre nós</a>
-          <a href="#" className="hover:text-white">Serviços</a>
-          <a href="#" className="hover:text-white">Portfólio</a>
-          <a href="#" className="hover:text-white">Preços</a>
-        </div>
-        <button className="bg-brand-purple px-6 py-2 rounded-full text-sm font-bold hover:bg-brand-pink transition-colors">
-          Solicitar Orçamento
-        </button>
-      </nav>
+      <Navbar />
 
       {/* HERO SECTION */}
       <section className="max-w-7xl mx-auto px-8 pt-20 pb-32 flex flex-col md:flex-row items-center gap-12 relative">
@@ -40,21 +41,27 @@ export default function LandingPage() {
           <h1 className="text-6xl md:text-8xl font-black leading-none uppercase italic">
             Estúdio de <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-brand-purple">
-              Dev de Jogos
+              Sistemas
             </span>
           </h1>
           <p className="max-w-md text-gray-400 leading-relaxed">
-            Realizamos suas ideias mais ousadas em jogos de qualquer gênero e complexidade. Do conceito ao lançamento.
+            Realizo suas ideias mais ousadas em um sistema de qualquer gênero e complexidade. Do conceito ao lançamento.
           </p>
           <button className="bg-gradient-to-r from-brand-purple to-brand-pink px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-brand-purple/20">
-            QUERO UM JOGO!
+            QUERO UM SISTEMA!
           </button>
         </div>
         <div className="flex-1 relative">
           {/* Placeholder para o Mascote 3D */}
           <div className="w-full aspect-square bg-gradient-to-tr from-brand-purple/20 to-transparent rounded-full blur-3xl absolute inset-0" />
           <div className="relative z-10 animate-bounce-slow">
-            <img src="/mascote.png" alt="Mascote 3D" className="w-full h-auto" />
+            <Image
+              src="/images/AvatarEllenMorganna.png"
+              alt="Avatar Ellen Morganna"
+              className="w-full h-auto"
+              width={500}
+              height={500}
+            />
           </div>
         </div>
       </section>
@@ -63,20 +70,34 @@ export default function LandingPage() {
       <section className="bg-white/5 py-24 backdrop-blur-sm border-y border-white/5">
         <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20 italic">
           <div>
-            <h2 className="text-4xl font-black uppercase mb-6">Sobre Nós</h2>
+            <h2 className="text-4xl font-black uppercase mb-6">Sobre Mim</h2>
             <p className="text-gray-400 leading-relaxed">
-              CODEMIND — seu passaporte para aventuras épicas. Somos criadores dedicados a transformar mundos virtuais em realidade, desafiando a imaginação dos jogadores.
+              Seu passaporte para aventuras épicas. Sou criadora dedicada a colocar a sua ideia no mundo digital.
             </p>
             <div className="flex gap-12 mt-12">
-              <div><span className="text-4xl font-black block">+100</span> <span className="text-xs text-gray-500 uppercase">Projetos</span></div>
-              <div><span className="text-4xl font-black block">20</span> <span className="text-xs text-gray-500 uppercase">Prêmios</span></div>
-              <div><span className="text-4xl font-black block">10</span> <span className="text-xs text-gray-500 uppercase">Anos</span></div>
+              <div><span className="text-4xl font-black block">+50</span> <span className="text-xs text-gray-500 uppercase">Projetos</span></div>
+              <div><span className="text-4xl font-black block">3</span> <span className="text-xs text-gray-500 uppercase">Prêmios</span></div>
+              <div><span className="text-4xl font-black block">6</span> <span className="text-xs text-gray-500 uppercase">Anos</span></div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {/* Simulação das telas de arcade da imagem */}
-            <div className="h-64 bg-brand-purple/20 rounded-2xl border border-white/10" />
-            <div className="h-64 bg-brand-pink/20 rounded-2xl border border-white/10 mt-8" />
+          <div id="telas" className="grid grid-cols-2 gap-4 ">
+            {/* Sobre Mim */}
+            <div className="relative h-64 bg-brand-purple/20 rounded-2xl border border-white/10 overflow-hidden">
+              <Image
+                src="/images/Avatar_Ellen_Morgana_Laptop.png"
+                alt="Avatar Ellen Morganna"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-64 bg-brand-pink/20 rounded-2xl border border-white/10 mt-8 overflow-hidden">
+              <Image
+                src="/images/Monitor_Codigos_React.png"
+                alt="Avatar Ellen Morganna"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

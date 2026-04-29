@@ -3,7 +3,6 @@
 import "./style.scss";
 import { NavbarPros } from "./interface";
 import Image from "next/image";
-import navBar from "../../../public/images/navbar.png";
 
 export const Navbar: React.FC<NavbarPros> = ({
   className = ''
@@ -15,7 +14,7 @@ export const Navbar: React.FC<NavbarPros> = ({
       id="nav-fullscreen"
       className={className + " flex flex-col items-center justify-center w-full"}
     >
-      <Image src={navBar} alt="Navbar" className="icon z-50 fixed right-4 top-9 transform -translate-y-1/2" width={50} height={50} />
+      {/* <Image src={navBar} alt="Navbar" className="icon z-50 fixed right-4 top-9 transform -translate-y-1/2" width={50} height={50} /> */}
       <ul className="menu flex flex-row justify-center items-center gap-6">
         <li>
           <button className={classButton} type="button">
