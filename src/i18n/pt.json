@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Sobre",
+    "services": "Servicos",
+    "portfolio": "Portfolio",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "titleStart": "Estudio de",
+      "titleHighlight": "Sistemas",
+      "description": "Realizo suas ideias mais ousadas em um sistema de qualquer genero e complexidade. Do conceito ao lancamento.",
+      "cta": "QUERO UM SISTEMA!"
+    },
+    "images": {
+      "avatarAlt": "Avatar Ellen Morganna",
+      "avatarLaptopAlt": "Avatar Ellen Morganna no laptop",
+      "monitorAlt": "Monitor com codigos React"
+    },
+    "about": {
+      "title": "Sobre Mim",
+      "description": "Seu passaporte para aventuras epicas. Sou criadora dedicada a colocar a sua ideia no mundo digital.",
+      "stats": {
+        "projects": "Projetos",
+        "awards": "Premios",
+        "years": "Anos"
+      }
+    },
+    "services": {
+      "titleStart": "Fazemos para",
+      "titleHighlight": "Voce",
+      "cards": {
+        "development": {
+          "title": "Desenvolvimento",
+          "description": "Criacao completa para iOS, Android, Windows e macOS."
+        },
+        "release": {
+          "title": "Publicacao",
+          "description": "Lancamento estrategico e popularizacao no mercado global."
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Estrategias de aquisicao de usuarios e engajamento."
+        },
+        "localization": {
+          "title": "Localizacao",
+          "description": "Adaptacao para diferentes idiomas e culturas globais."
+        }
+      }
+    },
+    "cta": {
+      "title": "Espere!",
+      "description": "Deixe uma solicitacao e receba uma consultoria gratuita com o conceito do seu jogo.",
+      "emailPlaceholder": "Seu e-mail profissional",
+      "send": "Enviar"
+    }
+  }
+}

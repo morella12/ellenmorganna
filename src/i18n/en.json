@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "titleStart": "Systems",
+      "titleHighlight": "Studio",
+      "description": "I turn your boldest ideas into a system of any genre and complexity. From concept to launch.",
+      "cta": "I WANT A SYSTEM!"
+    },
+    "images": {
+      "avatarAlt": "Ellen Morganna avatar",
+      "avatarLaptopAlt": "Ellen Morganna avatar with laptop",
+      "monitorAlt": "Monitor with React code"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "Your passport to epic adventures. I am a creator dedicated to bringing your idea into the digital world.",
+      "stats": {
+        "projects": "Projects",
+        "awards": "Awards",
+        "years": "Years"
+      }
+    },
+    "services": {
+      "titleStart": "What we do for",
+      "titleHighlight": "You",
+      "cards": {
+        "development": {
+          "title": "Development",
+          "description": "Full creation for iOS, Android, Windows and macOS."
+        },
+        "release": {
+          "title": "Publishing",
+          "description": "Strategic release and market growth worldwide."
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "User acquisition and engagement strategies."
+        },
+        "localization": {
+          "title": "Localization",
+          "description": "Adaptation to different global languages and cultures."
+        }
+      }
+    },
+    "cta": {
+      "title": "Wait!",
+      "description": "Leave a request and receive a free consultation with your game concept.",
+      "emailPlaceholder": "Your professional email",
+      "send": "Send"
+    }
+  }
+}
