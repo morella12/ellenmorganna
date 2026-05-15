@@ -3,6 +3,7 @@
 import './style.scss';
 import {NavbarPros} from './interface';
 import {useLocale, useTranslations} from 'next-intl';
+import {LocaleFlag} from '@/components/LocaleFlag/locale-flag.component';
 import {Link} from '@/i18n/navigation';
 import Image from 'next/image';
 import {Menu, X} from 'lucide-react';
@@ -25,6 +26,11 @@ export const Navbar: React.FC<NavbarPros> = ({className = ''}) => {
   ];
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const localeLinkClass = (code: 'pt' | 'en') =>
+    `inline-flex rounded-sm ring-offset-2 ring-offset-transparent transition-opacity hover:opacity-90 ${
+      locale === code ? 'ring-2 ring-cyan-400 opacity-100' : 'opacity-70'
+    }`;
 
   return (
     <nav
@@ -55,13 +61,12 @@ export const Navbar: React.FC<NavbarPros> = ({className = ''}) => {
           </ul>
         </div>
 
-        <div className="hidden md:flex items-center gap-2 text-lg">
-          <Link href="/" locale="pt" className={locale === 'pt' ? 'font-bold text-cyan-400' : ''}>
-            PT
+        <div className="hidden md:flex items-center gap-3">
+          <Link href="/" locale="pt" aria-label="Português" className={localeLinkClass('pt')}>
+            <LocaleFlag locale="pt" />
           </Link>
-          <span>/</span>
-          <Link href="/" locale="en" className={locale === 'en' ? 'font-bold text-cyan-400' : ''}>
-            EN
+          <Link href="/" locale="en" aria-label="English" className={localeLinkClass('en')}>
+            <LocaleFlag locale="en" />
           </Link>
         </div>
 
@@ -91,23 +96,24 @@ export const Navbar: React.FC<NavbarPros> = ({className = ''}) => {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-2 text-lg pt-2 border-t border-white/10">
+          <div className="flex items-center gap-3 pt-2 border-t border-white/10">
             <Link
               href="/"
               locale="pt"
-              className={locale === 'pt' ? 'font-bold text-cyan-400' : ''}
+              aria-label="Português"
+              className={localeLinkClass('pt')}
               onClick={closeMobileMenu}
             >
-              PT
+              <LocaleFlag locale="pt" />
             </Link>
-            <span>/</span>
             <Link
               href="/"
               locale="en"
-              className={locale === 'en' ? 'font-bold text-cyan-400' : ''}
+              aria-label="English"
+              className={localeLinkClass('en')}
               onClick={closeMobileMenu}
             >
-              EN
+              <LocaleFlag locale="en" />
             </Link>
           </div>
         </div>
