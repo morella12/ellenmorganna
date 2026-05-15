@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import {LanguageSelectorHeading} from '@/components/LanguageSelector/language-selector-heading.component';
 import {LocaleFlag} from '@/components/LocaleFlag/locale-flag.component';
 
 export default function LanguageSelectorPage() {
   return (
     <main className="min-h-screen bg-brand-dark text-white flex items-center justify-center px-8">
       <div className="text-center space-y-6">
-        <h1 className="text-4xl font-black uppercase">Escolha seu idioma</h1>
+        <LanguageSelectorHeading />
         <div className="flex gap-4 justify-center">
           <Link
             href="/pt"
