@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "serve out",
+    "preview": "npm run build && npm run start",
     "lint": "eslint"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "sass": "^1.98.0",
+    "serve": "^14.2.6",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
