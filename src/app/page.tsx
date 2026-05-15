@@ -6,10 +6,22 @@ export default function LanguageSelectorPage() {
       <div className="text-center space-y-6">
         <h1 className="text-4xl font-black uppercase">Escolha seu idioma</h1>
         <div className="flex gap-4 justify-center">
-          <Link href="/pt" className="px-6 py-3 rounded-xl bg-brand-purple hover:opacity-90 transition-opacity">
+          <Link
+            href="/pt"
+            className="px-6 py-3 rounded-xl bg-brand-purple hover:opacity-90 transition-opacity flex items-center gap-2"
+          >
+            <span className="text-2xl leading-none" aria-hidden>
+              🇧🇷
+            </span>
             Portugues
           </Link>
-          <Link href="/en" className="px-6 py-3 rounded-xl bg-cyan-600 hover:opacity-90 transition-opacity">
+          <Link
+            href="/en"
+            className="px-6 py-3 rounded-xl bg-cyan-600 hover:opacity-90 transition-opacity flex items-center gap-2"
+          >
+            <span className="text-2xl leading-none" aria-hidden>
+              🇺🇸
+            </span>
             English
           </Link>
         </div>
